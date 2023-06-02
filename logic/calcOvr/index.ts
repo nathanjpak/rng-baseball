@@ -1,14 +1,14 @@
-export interface batterStats {
-  con: number;
-  pwr: number;
-  eye: number;
-  spd: number;
-  fld: number;
-  thr: number;
-  clu: number;
-}
+import { IBatterAttributes } from "../../models/Player";
 
-const calcCatcher = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
+const calcCatcher = ({
+  con,
+  pwr,
+  eye,
+  spd,
+  fld,
+  thr,
+  clu,
+}: IBatterAttributes) => {
   return (
     (0.18 * con +
       0.18 * pwr +
@@ -21,7 +21,7 @@ const calcCatcher = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
   );
 };
 
-const calc1B = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
+const calc1B = ({ con, pwr, eye, spd, fld, thr, clu }: IBatterAttributes) => {
   return (
     (0.27 * con +
       0.28 * pwr +
@@ -34,7 +34,7 @@ const calc1B = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
   );
 };
 
-const calc2B = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
+const calc2B = ({ con, pwr, eye, spd, fld, thr, clu }: IBatterAttributes) => {
   return (
     (0.2 * con +
       0.18 * pwr +
@@ -47,7 +47,7 @@ const calc2B = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
   );
 };
 
-const calc3B = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
+const calc3B = ({ con, pwr, eye, spd, fld, thr, clu }: IBatterAttributes) => {
   return (
     (0.19 * con +
       0.21 * pwr +
@@ -60,7 +60,7 @@ const calc3B = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
   );
 };
 
-const calcSS = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
+const calcSS = ({ con, pwr, eye, spd, fld, thr, clu }: IBatterAttributes) => {
   return (
     (0.16 * con +
       0.12 * pwr +
@@ -73,7 +73,7 @@ const calcSS = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
   );
 };
 
-const calcLF = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
+const calcLF = ({ con, pwr, eye, spd, fld, thr, clu }: IBatterAttributes) => {
   return (
     (0.2 * con +
       0.21 * pwr +
@@ -86,7 +86,7 @@ const calcLF = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
   );
 };
 
-const calcCF = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
+const calcCF = ({ con, pwr, eye, spd, fld, thr, clu }: IBatterAttributes) => {
   return (
     (0.17 * con +
       0.1 * pwr +
@@ -99,7 +99,7 @@ const calcCF = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
   );
 };
 
-const calcRF = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
+const calcRF = ({ con, pwr, eye, spd, fld, thr, clu }: IBatterAttributes) => {
   return (
     (0.2 * con +
       0.25 * pwr +
@@ -112,7 +112,7 @@ const calcRF = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
   );
 };
 
-const calcDH = ({ con, pwr, eye, spd, fld, thr, clu }: batterStats) => {
+const calcDH = ({ con, pwr, eye, spd, fld, thr, clu }: IBatterAttributes) => {
   return (
     (0.35 * con +
       0.35 * pwr +
